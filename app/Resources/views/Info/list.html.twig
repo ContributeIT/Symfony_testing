@@ -1,0 +1,23 @@
+<h1>List Products</h1>
+
+{{ form_start(form) }}
+{{ form_widget(form) }}
+{{ form_end(form) }}
+
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Status</th>
+    </tr>
+    {% for prods in prod %}
+    <tr>
+        <td>{{ prods.id }}</td>
+        <td>{{ prods.name }}</td>
+        <td>{{ prods.category }}</td>
+        <td>{{ prods.status }}</td>
+    </tr>
+    {% endfor %}
+</table>

@@ -1,0 +1,31 @@
+<h1>List Of Consoles</h1>
+
+{{ form_start(form) }}
+{{ form_widget(form) }}
+{{ form_end(form) }}
+
+<style>
+table, th, td {
+border: 1px solid black;
+border-collapse: collapse;
+}
+</style>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Nation</th>
+        <th>Quantity</th>
+        <th>Price</th>
+    </tr>
+    {% for consoles in console %}
+        <tr>
+            <td>{{ consoles.id }}</td>
+            <td>{{ consoles.name }}</td>
+            <td>{{ consoles.nation }}</td>
+            <td>{{ consoles.quantity }}</td>
+            <td>{{ consoles.price }}</td>
+        </tr>
+    {% endfor %}
+</table>
